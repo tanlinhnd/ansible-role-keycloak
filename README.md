@@ -20,10 +20,10 @@ Role Variables
 
 The default set of variables defines the settings, keycloak will be installed with
 
-    keycloak_version: 7.0.0
+    keycloak_version: 10.0.2
     keycloak_dir: /var/lib/keycloak
     keycloak_archive: keycloak-{{ keycloak_version }}.tar.gz
-    keycloak_url: http://downloads.jboss.org/keycloak/{{ keycloak_version }}/{{keycloak_archive }}
+    keycloak_url: https://downloads.jboss.org/keycloak/{{ keycloak_version }}/{{ keycloak_archive}}
     keycloak_jboss_home: "{{ keycloak_dir }}/keycloak-{{ keycloak_version }}"
     keycloak_log_dir: "{{ keycloak_jboss_home }}/standalone/log"
     keycloak_bind_port: "8080"
@@ -39,6 +39,9 @@ The default set of variables defines the settings, keycloak will be installed wi
     keycloak_mysql_password: keycloak
     keycloak_mysql_database: keycloak
     keycloak_mysql_port: 3306
+    keycloak_srv_namespace: 'urn:jboss:domain:10.0'
+    keycloak_sub_namespace: 'urn:jboss:domain:datasources:5.0'
+    keycloak_jboss_timeout: '300'
 
 Example Playbook
 ----------------
