@@ -48,7 +48,7 @@ Example Playbook
 
     - hosts: keycloak
       roles:
-         - andrelohmann.keycloak
+         - tanlinhnd.keycloak
 
 License
 -------
